@@ -577,8 +577,9 @@ class _SearchableDropdownState<T> extends State<SearchableDropdown<T>> {
       child: Container(
         padding: padding.resolve(Directionality.of(context)),
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisSize: MainAxisSize.max,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             widget.isExpanded ? Expanded(child: clickable) : clickable,
             !widget.displayClearIcon
@@ -592,8 +593,9 @@ class _SearchableDropdownState<T> extends State<SearchableDropdown<T>> {
                     child: Container(
                       padding: padding.resolve(Directionality.of(context)),
                       child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        mainAxisSize: MainAxisSize.min,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        mainAxisSize: MainAxisSize.max,
+                        crossAxisAlignment: CrossAxisAlignment.center,
                         children: <Widget>[
                           IconTheme(
                             data: IconThemeData(
@@ -631,7 +633,7 @@ class _SearchableDropdownState<T> extends State<SearchableDropdown<T>> {
         Stack(
           children: <Widget>[
             Padding(
-              padding: EdgeInsets.all(10.0),
+              padding: EdgeInsets.all(0.0),
               child: result,
             ),
             widget.underline is NotGiven
@@ -790,7 +792,7 @@ class _DropdownDialogState<T> extends State<DropdownDialog> {
             horizontal: widget.dialogBox ? 10 : 4),
         child: new Container(
           constraints: widget.menuConstraints,
-          padding: EdgeInsets.symmetric(vertical: 15, horizontal: 15),
+          padding: EdgeInsets.symmetric(vertical: 0, horizontal: 0),
           child: new Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
